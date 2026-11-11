@@ -1,134 +1,111 @@
 # Active-Directory-Home-Lab
-Project Overview: 
-This project demonstrates my hands-on experience configuring and managing a Windows Server Active Directory environment using VMware Workstation.
-I built this lab to strengthen my understanding of Windows Server administration, networking, identity and access management, Group Policy, security auditing, and file-sharing permissions.
 
-The goal was to simulate a small business IT environment where employees belong to different departments and receive access to network resources based on their assigned roles.
 
-Lab Environment:
+**Windows Server | Active Directory | DNS | Group Policy | Security Auditing | Access Control**
 
-Virtualization Platform: VMware Workstation
+## Project Overview
 
-Domain: ADLAB.LOCAL
+Built and configured a Windows Server Active Directory environment using VMware Workstation to simulate a small business IT network.
 
-Domain Controller: DC01
+The purpose of this project was to gain hands-on experience with managing users, domain authentication, DNS, Group Policy, security auditing, and file permissions for different departments.
 
-Client Workstation: CLIENT01
+This lab demonstrates practical skills used in IT Support, Help Desk, and Windows Systems Administration.
 
-Technologies Used:
+## Lab Environment
 
-Windows Server
+| Component | Configuration |
+|---|---|
+| Virtualization | VMware Workstation |
+| Domain | `ADLAB.LOCAL` |
+| Domain Controller | `DC01` |
+| Client Workstation | `CLIENT01` |
+| Server | Windows Server |
+| Technologies | AD DS, DNS, GPO, SMB, NTFS |
 
-Active Directory Domain Services (AD DS)
+## Project Implementation
 
-DNS
+### 1. Domain Controller and DNS Configuration
 
-Group Policy Management
+- Installed Active Directory Domain Services (AD DS) on Windows Server.
+- Promoted `DC01` to a domain controller for `ADLAB.LOCAL`.
+- Configured a static IP address and DNS services.
+- Configured DNS forwarding to resolve external domain names.
 
-Active Directory Users and Computers (ADUC)
+**What I learned:** How domain controllers manage authentication and why DNS is important for Active Directory to function properly.
 
-Windows Event Viewer
+### 2. Active Directory User and Group Management
 
-SMB File Sharing
+- Created organizational units (OUs) for IT, HR, Finance, and Marketing.
+- Created domain user accounts and security groups for different departments.
+- Organized users into security groups to manage access based on their department.
 
-NTFS and Share Permissions
+**What I learned:** How Active Directory makes it easier to manage users and control access through security groups.
 
-Project Objectives:
+### 3. Client Workstation Domain Integration
 
-Deploy and configure a Windows Server domain controller.
+- Configured `CLIENT01` to use `DC01` as its DNS server.
+- Successfully joined `CLIENT01` to the `ADLAB.LOCAL` domain.
+- Verified domain authentication using Active Directory credentials.
 
-Configure DNS and establish domain connectivity.
+**What I learned:** How Windows workstations connect to a domain and authenticate users through Active Directory.
 
-Join a Windows client workstation to the domain.
+### 4. Group Policy and Security Auditing
 
-Create organizational units, user accounts, and security groups.
+- Configured Group Policy to audit successful and failed logon attempts.
+- Linked the policy to the workstation OU.
+- Applied and verified Group Policy using `gpupdate` and `gpresult`.
+- Reviewed authentication events using Windows Event Viewer.
 
-Manage department access using security groups.
+**Security Events:**
 
-Configure Group Policy for successful and failed logon auditing.
+| Event ID | Description |
+|---|---|
+| 4624 | Successful logon |
+| 4625 | Failed logon |
 
-Review Windows Security Event Logs to verify auditing.
+**What I learned:** How Group Policy and security logs help administrators monitor login activity and troubleshoot authentication problems.
 
-Configure departments shared folders with appropriate permissions.
+### 5. File Sharing and Permissions for Different Departments
 
-Test authorized and unauthorized access to network resources.
+- Created shared folders for IT, HR, Finance, and Marketing.
+- Configured SMB file sharing on `DC01`.
+- Assigned share and NTFS permissions to security groups for each department.
+- Tested folder access from `CLIENT01` using domain user accounts.
+- Practiced limiting access based on users' group membership.
 
-Project Implementation:
+**What I learned:** How share and NTFS permissions work together to control who can access files and folders on a network.
 
-The following sections document the configuration, verification, troubleshooting, and testing performed throughout the lab.
+## Testing and Troubleshooting
 
-1. Windows Server and Domain Controller Configuration
+Throughout the lab, I verified configurations and practiced troubleshooting issues involving:
 
-Configured a Windows Server virtual machine named DC01 and installed Active Directory Domain Services.
+- DNS resolution and domain connectivity.
+- Domain authentication and user account access.
+- Group Policy application.
+- Successful and failed logon auditing.
+- Security group membership and shared folder permissions.
 
-Promoted DC01 to a domain controller for the ADLAB.LOCAL domain.
+These exercises helped me better understand how to identify and resolve common issues in a Windows domain environment.
 
-Configured a static IP address and DNS services to provide reliable domain connectivity and name resolution.
+## Skills Demonstrated
 
-2. Active Directory Organization
+| Windows Administration | Networking and Security |
+|---|---|
+| Active Directory Domain Services | DNS Configuration |
+| User and Group Management | Network Troubleshooting |
+| Organizational Units | SMB File Sharing |
+| Windows Domain Joining | NTFS and Share Permissions |
+| Group Policy Management | Role-Based Access Control |
+| Windows Event Viewer | Security Auditing |
 
-Created organizational units to organize users and departments.
+## Project Screenshots
 
-Configured security groups based on departments to manage access permissions through group membership rather than assigning permissions individually.
+Screenshots of the configurations and testing are available in the [screenshots folder](screenshots/).
 
-3. Client Domain Integration
+These screenshots show the Active Directory setup, DNS configuration, security groups, Group Policy, security auditing, and file permissions for different departments.
 
-Configured CLIENT01 to use DC01 for DNS resolution and successfully joined the workstation to ADLAB.LOCAL.
+## Conclusion
 
-Verified connectivity and domain Group Policy processing.
+This project helped me gain hands-on experience with Windows Server administration, Active Directory, networking, and access management.
 
-4. Group Policy and Security Auditing
-
-Configured Group Policy to audit successful and failed logon events on the domain-joined workstation.
-
-Verified policy application using gpupdate and gpresult.
-
-Reviewed Windows Event Viewer Security Logs and identified:
-
-Event ID 4624 — Successful logon
-
-Event ID 4625 — Failed logon
-
-5. Department File Sharing and Access Control
-
-Configured shared folders for the departments of IT, HR, Finance, and Marketing.
-
-Assigned share and NTFS permissions to security groups that are organized by departments.
-
-Tested network folder access from CLIENT01 to evaluate role-based access restrictions and the principle of least privilege.
-
-Skills Demonstrated:
-
-Windows Server Administration
-
-Active Directory Domain Services
-
-DNS Configuration and Troubleshooting
-
-Domain Joining
-
-User and Group Management
-
-Organizational Unit Management
-
-Group Policy Configuration
-
-Windows Security Event Log Analysis
-
-SMB File Sharing
-
-NTFS and Share Permissions
-
-Role-Based Access Control
-
-Network Troubleshooting
-
-Project Documentation:
-
-Screenshots documenting the configurations and testing are available in the screenshots directory.
-
-Conclusion:
-
-This lab provided practical experience administering a Windows domain environment and troubleshooting authentication, networking, Group Policy, and resource access.
-
-It strengthened my understanding of how IT administrators manage users, workstations, permissions, and security policies in a business environment.
+By building and troubleshooting a small business IT environment, I strengthened my understanding of how IT administrators manage users, computers, security policies, and access to shared resources.
