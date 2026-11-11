@@ -1,11 +1,11 @@
 # Active-Directory-Home-Lab
-Project Overview 
+Project Overview: 
 This project demonstrates my hands-on experience configuring and managing a Windows Server Active Directory environment using VMware Workstation.
 I built this lab to strengthen my understanding of Windows Server administration, networking, identity and access management, Group Policy, security auditing, and file-sharing permissions.
 
 The goal was to simulate a small business IT environment where employees belong to different departments and receive access to network resources based on their assigned roles.
 
-Lab Environment
+Lab Environment:
 
 Virtualization Platform: VMware Workstation
 
@@ -43,13 +43,13 @@ Join a Windows client workstation to the domain.
 
 Create organizational units, user accounts, and security groups.
 
-Manage departmental access using security groups.
+Manage department access using security groups.
 
 Configure Group Policy for successful and failed logon auditing.
 
 Review Windows Security Event Logs to verify auditing.
 
-Configure departmental shared folders with appropriate permissions.
+Configure departments shared folders with appropriate permissions.
 
 Test authorized and unauthorized access to network resources.
 
@@ -69,7 +69,7 @@ Configured a static IP address and DNS services to provide reliable domain conne
 
 Created organizational units to organize users and departments.
 
-Configured departmental security groups to manage access permissions through group membership rather than assigning permissions individually.
+Configured security groups based on departments to manage access permissions through group membership rather than assigning permissions individually.
 
 3. Client Domain Integration
 
@@ -91,9 +91,9 @@ Event ID 4625 — Failed logon
 
 5. Department File Sharing and Access Control
 
-Configured departmental shared folders for IT, HR, Finance, and Marketing.
+Configured shared folders for the departments of IT, HR, Finance, and Marketing.
 
-Assigned share and NTFS permissions to departmental security groups.
+Assigned share and NTFS permissions to security groups that are organized by departments.
 
 Tested network folder access from CLIENT01 to evaluate role-based access restrictions and the principle of least privilege.
 
