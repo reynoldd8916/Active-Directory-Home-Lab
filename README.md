@@ -33,7 +33,7 @@ SMB File Sharing
 
 NTFS and Share Permissions
 
-Project Objectives
+Project Objectives:
 
 Deploy and configure a Windows Server domain controller.
 
@@ -53,7 +53,7 @@ Configure departments shared folders with appropriate permissions.
 
 Test authorized and unauthorized access to network resources.
 
-Project Implementation
+Project Implementation:
 
 The following sections document the configuration, verification, troubleshooting, and testing performed throughout the lab.
 
@@ -97,7 +97,7 @@ Assigned share and NTFS permissions to security groups that are organized by dep
 
 Tested network folder access from CLIENT01 to evaluate role-based access restrictions and the principle of least privilege.
 
-Skills Demonstrated
+Skills Demonstrated:
 
 Windows Server Administration
 
@@ -123,11 +123,11 @@ Role-Based Access Control
 
 Network Troubleshooting
 
-Project Documentation
+Project Documentation:
 
 Screenshots documenting the configurations and testing are available in the screenshots directory.
 
-Conclusion
+Conclusion:
 
 This lab provided practical experience administering a Windows domain environment and troubleshooting authentication, networking, Group Policy, and resource access.
 
