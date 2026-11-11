@@ -1,2 +1,2 @@
 # Active-Directory-Home-Lab
-Just a hands-on lab using Active Directory so I can demonstrate Windows Server, DNS, Group Policy, security auditing, and role-based file access.
+Hands-on Active Directory home lab demonstrating Windows Server administration, DNS, Group Policy, security auditing, and department-based file permissions 
