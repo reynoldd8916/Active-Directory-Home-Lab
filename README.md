@@ -155,9 +155,7 @@ Screenshots documenting the Windows Server configurations, Active Directory mana
 
 These screenshots document Ubuntu Server configuration, network connectivity, and integration with the `ADLAB.LOCAL` Active Directory domain.
 
-
-
-
+[View Ubuntu Linux Server Screenshots](screenshots/Github%20Screenshots/Ubuntu/)
 
 
 
