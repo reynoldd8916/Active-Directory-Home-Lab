@@ -1,13 +1,13 @@
 # Active-Directory-Home-Lab
 
 
-**Windows Server | Active Directory | DNS | Group Policy | Security Auditing | Access Control**
+**Windows Server | Active Directory | DNS | Group Policy | Security Auditing | Access Control | Ubuntu Linux**
 
 ## Project Overview
 
 Built and configured a Windows Server Active Directory environment using VMware Workstation to simulate a small business IT network.
 
-The purpose of this project was to gain hands-on experience with managing users, domain authentication, DNS, Group Policy, security auditing, and file permissions for different departments.
+The purpose of this project was to gain hands-on experience with managing users, domain authentication, DNS, Group Policy, security auditing, and file permissions across different departments.
 
 This lab demonstrates practical skills used in IT Support, Help Desk, and Windows Systems Administration.
 
@@ -20,7 +20,8 @@ This lab demonstrates practical skills used in IT Support, Help Desk, and Window
 | Domain Controller | `DC01` |
 | Client Workstation | `CLIENT01` |
 | Server | Windows Server |
-| Technologies | AD DS, DNS, GPO, SMB, NTFS |
+| Linux Server | Ubuntu Server |
+| Technologies | AD DS, DNS, GPO, SMB, NTFS, Linux |
 
 ## Project Implementation
 
@@ -75,28 +76,74 @@ This lab demonstrates practical skills used in IT Support, Help Desk, and Window
 
 **What I learned:** How share and NTFS permissions work together to control who can access files and folders on a network.
 
+### 6. Ubuntu Linux Server Integration
+
+- Installed and configured an Ubuntu Server virtual machine using VMware Workstation.
+
+- Configured network connectivity between Ubuntu Server and the Windows Server environment.
+
+- Verified connectivity to DC01.
+
+- Successfully joined Ubuntu Server to the ADLAB.LOCAL domain.
+
+**What I learned:** How Linux systems can integrate with a Windows Active Directory environment and use centralized identity management.
+
+
 ## Testing and Troubleshooting
 
-Throughout the lab, I verified configurations and practiced troubleshooting issues involving:
+Throughout the lab, I verified configurations and troubleshot issues involving DNS, domain authentication, Group Policy, and network permissions.
 
-- DNS resolution and domain connectivity.
-- Domain authentication and user account access.
-- Group Policy application.
-- Successful and failed logon auditing.
-- Security group membership and shared folder permissions.
+### DNS Resolution Troubleshooting
 
-These exercises helped me better understand how to identify and resolve common issues in a Windows domain environment.
+During the initial configuration, external DNS lookups were unsuccessful.
+
+- Investigated DNS resolution using `nslookup`.
+- Configured DNS forwarding on `DC01`.
+- Verified that external domain names could be resolved successfully.
+
+### Domain Connectivity and Authentication
+
+- Verified network connectivity between `DC01` and `CLIENT01`.
+- Configured the client to use the domain controller for DNS.
+- Troubleshot domain authentication and successfully signed in using domain credentials.
+
+### Group Policy and Security Auditing
+
+- Applied Group Policy updates using `gpupdate`.
+- Verified policy application using `gpresult`.
+- Reviewed successful and failed logon events in Windows Event Viewer.
+
+### File Share Access Testing
+
+- Tested access to shared folders using domain user accounts.
+- Verified that security group membership controlled access to network resources.
+- Confirmed that users without the required permissions were restricted from accessing protected folders.
+
+
+### Ubuntu Linux Connectivity
+
+- Troubleshot initial network connectivity issues between Ubuntu Server and the Windows Server environment.
+- Verified connectivity after bringing the domain controller online.
+- Successfully integrated Ubuntu Server into the Active Directory domain.
+
+These exercises strengthened my ability to identify and resolve common issues in a Windows and Linux network environment.
+
+
+
 
 ## Skills Demonstrated
 
-| Windows Administration | Networking and Security |
+| **Systems Administration** | **Networking and Security** |
 |---|---|
 | Active Directory Domain Services | DNS Configuration |
-| User and Group Management | Network Troubleshooting |
-| Organizational Units | SMB File Sharing |
-| Windows Domain Joining | NTFS and Share Permissions |
-| Group Policy Management | Role-Based Access Control |
-| Windows Event Viewer | Security Auditing |
+| Windows Server Administration | Network Troubleshooting |
+| Ubuntu Linux Server | Domain Authentication |
+| User and Group Management | SMB File Sharing |
+| Organizational Units | NTFS and Share Permissions |
+| Windows Domain Joining | Role-Based Access Control |
+| Linux Domain Integration | Security Auditing |
+| Group Policy Management | Windows Event Viewer |
+
 
 ## Project Screenshots
 
@@ -106,6 +153,8 @@ These screenshots show the Active Directory setup, DNS configuration, security g
 
 ## Conclusion
 
-This project helped me gain hands-on experience with Windows Server administration, Active Directory, networking, and access management.
+This project provided hands-on experience with Windows Server administration, Active Directory, Linux integration, networking, and access management.
 
-By building and troubleshooting a small business IT environment, I strengthened my understanding of how IT administrators manage users, computers, security policies, and access to shared resources.
+By building and troubleshooting a small business IT environment, I strengthened my understanding of how administrators manage users, computers, authentication, security policies, and network resources across Windows and Linux systems.
+
+This lab serves as a foundation for my continued learning in IT Support, Systems Administration, and Identity and Access Management.
