@@ -147,9 +147,17 @@ These exercises strengthened my ability to identify and resolve common issues in
 
 ## Project Screenshots
 
-Screenshots of the configurations and testing are available in the [screenshots folder](screenshots/).
+Screenshots documenting the Windows Server configurations, Active Directory management, DNS, Group Policy, auditing, and file permissions are available in the repository. 
 
-These screenshots show the Active Directory setup, DNS configuration, security groups, Group Policy, security auditing, and file permissions for different departments.
+[screenshots folder](screenshots/).
+
+### Ubuntu Linux Server Screenshots
+
+These screenshots document Ubuntu Server configuration, network connectivity, and integration with the `ADLAB.LOCAL` Active Directory domain.
+
+
+
+
 
 ## Conclusion
 
