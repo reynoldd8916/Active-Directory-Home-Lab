@@ -159,6 +159,9 @@ These screenshots document Ubuntu Server configuration, network connectivity, an
 
 
 
+
+
+
 ## Conclusion
 
 This project provided hands-on experience with Windows Server administration, Active Directory, Linux integration, networking, and access management.
